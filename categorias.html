@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías de energía - EnergíaWeb</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">⚡ Energía<span>Web</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+            <!-- Después del menú de navegación, antes de </ul> -->
+<button id="themeToggle" class="theme-toggle" style="margin-left: auto;">☀️ Modo claro</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="categorias.html" class="active">Categorías</a></li>
+                <li><a href="articulos-recientes.html">Artículos</a></li>
+                <li><a href="glosario.html">Glosario</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>📂 Categorías de energía</h1>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Explora los tipos de energía agrupados por su naturaleza física.</p>
+
+        <!-- CATEGORÍA 1: MECÁNICA -->
+        <section id="mecanica" style="margin-bottom: 3rem;">
+            <h2 style="color: var(--secondary); font-size: 1.8rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">⚡ Energía Mecánica</h2>
+            <p style="color: var(--text-muted); margin: 0.5rem 0 1.5rem;">La energía asociada al movimiento y la posición de los objetos.</p>
+
+            <div class="articles-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                <div class="article-card">
+                    <h3><a href="articulos/mecanica/energia-cinetica.html">Energía Cinética</a></h3>
+                    <p>La energía de los cuerpos en movimiento. Fórmula, ejemplos y aplicaciones.</p>
+                </div>
+                <div class="article-card">
+                    <h3><a href="articulos/mecanica/energia-potencial-gravitatoria.html">Energía Potencial Gravitatoria</a></h3>
+                    <p>La energía almacenada por la altura de un objeto en un campo gravitatorio.</p>
+                </div>
+                <div class="article-card">
+                    <h3><a href="articulos/mecanica/energia-potencial-elastica.html">Energía Potencial Elástica</a></h3>
+                    <p>La energía almacenada en muelles, gomas y materiales elásticos.</p>
+                </div>
+                <div class="article-card">
+                    <h3><a href="articulos/mecanica/energia-mecanica.html">Energía Mecánica</a></h3>
+                    <p>La suma de la energía cinética y potencial de un sistema.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORÍA 2: TÉRMICA Y QUÍMICA -->
+        <section id="termica" style="margin-bottom: 3rem;">
+            <h2 style="color: var(--secondary); font-size: 1.8rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">🔥 Energía Térmica y Química</h2>
+            <p style="color: var(--text-muted); margin: 0.5rem 0 1.5rem;">La energía del calor y de las reacciones entre sustancias.</p>
+
+            <div class="articles-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                <div class="article-card">
+                    <h3><a href="articulos/termica-quimica/energia-termica.html">Energía Térmica</a></h3>
+                    <p>La energía interna de un sistema asociada a la temperatura.</p>
+                </div>
+                <div class="article-card">
+                    <h3><a href="articulos/termica-quimica/energia-quimica.html">Energía Química</a></h3>
+                    <p>La energía almacenada en los enlaces de los compuestos químicos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORÍA 3: ELÉCTRICA Y MAGNÉTICA -->
+        <section id="electrica" style="margin-bottom: 3rem;">
+            <h2 style="color: var(--secondary); font-size: 1.8rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">⚡ Energía Eléctrica y Magnética</h2>
+            <p style="color: var(--text-muted); margin: 0.5rem 0 1.5rem;">La energía de las cargas, corrientes y campos magnéticos.</p>
+
+            <div class="articles-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                <div class="article-card">
+                    <h3><a href="articulos/electrica-magnetica/energia-electrica.html">Energía Eléctrica</a></h3>
+                    <p>La energía transportada por la corriente eléctrica.</p>
+                </div>
+                <div class="article-card">
+                    <h3><a href="articulos/electrica-magnetica/energia-magnetica.html">Energía Magnética</a></h3>
+                    <p>La energía asociada a los campos magnéticos.</p>
+                </div>
+                <div class="article-card">
+                    <h3><a href="articulos/electrica-magnetica/energia-electromagnetica.html">Energía Electromagnética</a></h3>
+                    <p>La energía de las ondas electromagnéticas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORÍA 4: ONDULATORIA -->
+        <section id="ondulatoria" style="margin-bottom: 3rem;">
+            <h2 style="color: var(--secondary); font-size: 1.8rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">💫 Energía Ondulatoria</h2>
+            <p style="color: var(--text-muted); margin: 0.5rem 0 1.5rem;">La energía transportada por ondas y radiaciones.</p>
+
+            <div class="articles-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                <div class="article-card">
+                    <h3><a href="articulos/ondulatoria/energia-radiante.html">Energía Radiante</a></h3>
+                    <p>La energía transportada por ondas electromagnéticas.</p>
+                </div>
+                <div class="article-card">
+                    <h3><a href="articulos/ondulatoria/energia-luminosa.html">Energía Luminosa</a></h3>
+                    <p>La energía de la luz visible y sus aplicaciones.</p>
+                </div>
+                <div class="article-card">
+                    <h3><a href="articulos/ondulatoria/energia-sonora.html">Energía Sonora</a></h3>
+                    <p>La energía transportada por ondas sonoras.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORÍA 5: NUCLEAR Y FUNDAMENTAL -->
+        <section id="nuclear" style="margin-bottom: 3rem;">
+            <h2 style="color: var(--secondary); font-size: 1.8rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">☢️ Energía Nuclear y Fundamental</h2>
+            <p style="color: var(--text-muted); margin: 0.5rem 0 1.5rem;">La energía del núcleo atómico y las fuerzas fundamentales.</p>
+
+            <div class="articles-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                <div class="article-card">
+                    <h3><a href="articulos/nuclear-fundamental/energia-nuclear.html">Energía Nuclear</a></h3>
+                    <p>La energía liberada en reacciones nucleares de fisión y fusión.</p>
+                </div>
+                <div class="article-card">
+                    <h3><a href="articulos/nuclear-fundamental/energia-gravitacional.html">Energía Gravitacional</a></h3>
+                    <p>La energía asociada a la interacción gravitatoria entre masas.</p>
+                </div>
+                <div class="article-card">
+                    <h3><a href="articulos/nuclear-fundamental/energia-masa.html">Energía de Masa (E=mc²)</a></h3>
+                    <p>La ecuación de Einstein que une masa y energía.</p>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="index.html" class="btn btn-outline">← Volver al inicio</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>⚡ EnergíaWeb</h4>
+                <p>Tu portal de referencia para entender la física de la energía. Artículos claros y detallados para todos los niveles.</p>
+            </div>
+            <div>
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="articulos-recientes.html">Artículos</a></li>
+                    <li><a href="glosario.html">Glosario</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Tipos de energía</h4>
+                <ul>
+                    <li><a href="articulos/mecanica/energia-cinetica.html">Cinética</a></li>
+                    <li><a href="articulos/nuclear-fundamental/energia-masa.html">E = mc²</a></li>
+                    <li><a href="articulos/termica-quimica/energia-termica.html">Térmica</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EnergíaWeb. Hecho con ⚡ por un amante de la física.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

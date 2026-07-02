@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnergíaWeb - Tu portal sobre los tipos de energía</title>
+    <meta name="description"
+      content="Explora la física de la energía: cinética, potencial, térmica, nuclear y más. Artículos detallados con explicaciones claras.">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="logo">⚡ Energía<span>Web</span></a>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+        <!-- Después del menú de navegación, antes de </ul> -->
+        <button id="themeToggle" class="theme-toggle"
+          style="margin-left: auto;">☀️ Modo claro</button>
+          
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="categorias.html">Categorías</a></li>
+          <li><a href="articulos-recientes.html">Artículos</a></li>
+          <li><a href="glosario.html">Glosario</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <h1>🔬 La energía que mueve el universo</h1>
+        <p>Explora la física detrás de cada tipo de energía: desde la cinética
+          hasta la energía de masa de Einstein. Artículos detallados para
+          curiosos y estudiantes.</p>
+        <div class="hero-search">
+          <input type="text" id="heroSearch"
+            placeholder="Buscar artículo... (ej: energía cinética)">
+          <button class="btn btn-primary" id="searchBtn">Buscar</button>
+        </div>
+      </section>
+
+      <!-- CATEGORÍAS DESTACADAS -->
+      <h2 class="section-title">Explora por categorías</h2>
+      <p class="section-subtitle">Agrupaciones lógicas para entender mejor los
+        tipos de energía</p>
+
+      <div class="categories-grid">
+        <a href="categorias.html#mecanica" class="category-card">
+          <span class="category-icon">⚡</span>
+          <h3>Energía Mecánica</h3>
+          <p>Cinética, potencial gravitatoria y elástica</p>
+        </a>
+        <a href="categorias.html#termica" class="category-card">
+          <span class="category-icon">🔥</span>
+          <h3>Energía Térmica y Química</h3>
+          <p>Calor y reacciones químicas</p>
+        </a>
+        <a href="categorias.html#electrica" class="category-card">
+          <span class="category-icon">⚡</span>
+          <h3>Energía Eléctrica y Magnética</h3>
+          <p>Electricidad, magnetismo y ondas EM</p>
+        </a>
+        <a href="categorias.html#ondulatoria" class="category-card">
+    <span class="category-icon">💫</span>
+    <h3>Energía Ondulatoria</h3>
+    <p>Radiante, luminosa y sonora</p>
+</a>
+        <a href="categorias.html#nuclear" class="category-card">
+          <span class="category-icon">☢️</span>F
+          <h3>Energía Nuclear y Fundamental</h3>
+          <p>Nuclear, gravitacional y E=mc²</p>
+        </a>
+      </div>
+
+      <!-- ARTÍCULOS RECIENTES -->
+      <h2 class="section-title">📝 Artículos recientes</h2>
+      <p class="section-subtitle">Lo último en física de la energía</p>
+
+      <div class="articles-grid">
+        <article class="article-card">
+          <span class="badge">Mecánica</span>
+          <h3><a href="articulos/mecanica/energia-cinetica.html">Energía
+              Cinética: la energía del movimiento</a></h3>
+          <p>Todo lo que necesitas saber sobre la energía cinética: fórmula,
+            ejemplos cotidianos y aplicaciones en la vida real.</p>
+          <div class="meta">
+            <span>📅 1 julio 2026</span>
+            <span>⏱ 8 min lectura</span>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <span class="badge">Nuclear</span>
+          <h3><a href="articulos/nuclear-fundamental/energia-masa.html">Energía
+              de Masa (E=mc²): la ecuación que cambió el mundo</a></h3>
+          <p>Descubre qué significa la ecuación más famosa de Einstein y cómo la
+            energía y la masa están conectadas.</p>
+          <div class="meta">
+            <span>📅 28 junio 2026</span>
+            <span>⏱ 10 min lectura</span>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <span class="badge">Ondulatoria</span>
+          <h3><a href="articulos/ondulatoria/energia-luminosa.html">Energía
+              Luminosa: la luz como fuente de energía</a></h3>
+          <p>Desde el sol hasta los LEDs, cómo la energía luminosa nos rodea y
+            cómo la aprovechamos.</p>
+          <div class="meta">
+            <span>📅 25 junio 2026</span>
+            <span>⏱ 6 min lectura</span>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <a href="articulos-recientes.html" class="btn btn-outline">Ver todos los
+          artículos →</a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div>
+          <h4>⚡ EnergíaWeb</h4>
+          <p>Tu portal de referencia para entender la física de la energía.
+            Artículos claros y detallados para todos los niveles.</p>
+        </div>
+        <div>
+          <h4>Enlaces rápidos</h4>
+          <ul>
+            <li><a href="categorias.html">Categorías</a></li>
+            <li><a href="articulos-recientes.html">Artículos</a></li>
+            <li><a href="glosario.html">Glosario</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Tipos de energía</h4>
+          <ul>
+            <li><a
+                href="articulos/mecanica/energia-cinetica.html">Cinética</a></li>
+            <li><a href="articulos/nuclear-fundamental/energia-masa.html">E =
+                mc²</a></li>
+            <li><a
+                href="articulos/termica-quimica/energia-termica.html">Térmica</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 EnergíaWeb. Hecho con ⚡ por un amante de la física.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

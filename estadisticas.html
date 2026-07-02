@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas - EnergíaWeb</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">⚡ Energía<span>Web</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+            <!-- Después del menú de navegación, antes de </ul> -->
+<button id="themeToggle" class="theme-toggle" style="margin-left: auto;">☀️ Modo claro</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+                <li><a href="articulos-recientes.html">Artículos</a></li>
+                <li><a href="glosario.html">Glosario</a></li>
+                <li><a href="estadisticas.html" class="active">📊 Estadísticas</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><button id="themeToggle" class="theme-toggle">☀️ Modo claro</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>📊 Estadísticas de la comunidad</h1>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Artículos más populares y actividad de los usuarios.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; text-align: center;">
+                <div style="font-size: 2.5rem; font-weight: 800; color: var(--secondary);" id="totalArticulos">15</div>
+                <div style="color: var(--text-muted);">Artículos publicados</div>
+            </div>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; text-align: center;">
+                <div style="font-size: 2.5rem; font-weight: 800; color: var(--secondary);" id="totalLikes">0</div>
+                <div style="color: var(--text-muted);">Total de "Me gusta"</div>
+            </div>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; text-align: center;">
+                <div style="font-size: 2.5rem; font-weight: 800; color: var(--secondary);" id="totalFavoritos">0</div>
+                <div style="color: var(--text-muted);">Artículos guardados</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 2rem;">🏆 Artículos más populares</h2>
+        <div id="rankingArticulos" style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1rem;"></div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="index.html" class="btn btn-outline">← Volver al inicio</a>
+        </div>
+    </main>
+
+    <script>
+        // Cargar estadísticas desde localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const articulos = [
+                { id: 'energia-cinetica', title: 'Energía Cinética', url: 'articulos/mecanica/energia-cinetica.html' },
+                { id: 'energia-potencial-gravitatoria', title: 'Energía Potencial Gravitatoria', url: 'articulos/mecanica/energia-potencial-gravitatoria.html' },
+                // ... añade todos los artículos
+            ];
+
+            let totalLikes = 0;
+            let ranking = [];
+
+            articulos.forEach(art => {
+                const likes = parseInt(localStorage.getItem('likes_' + art.id)) || 0;
+                totalLikes += likes;
+                ranking.push({ ...art, likes });
+            });
+
+            document.getElementById('totalLikes').textContent = totalLikes;
+
+            const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+            document.getElementById('totalFavoritos').textContent = favoritos.length;
+
+            // Mostrar ranking
+            ranking.sort((a, b) => b.likes - a.likes);
+            const rankingHTML = ranking.map((art, index) => `
+                <div style="display: flex; align-items: center; gap: 1rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.8rem 1.2rem;">
+                    <span style="font-size: 1.5rem; font-weight: 800; color: ${index === 0 ? 'var(--secondary)' : 'var(--text-muted)'}; min-width: 40px;">#${index + 1}</span>
+                    <a href="${art.url}" style="flex: 1; color: var(--text-light);">${art.title}</a>
+                    <span style="color: var(--secondary);">❤️ ${art.likes}</span>
+                </div>
+            `).join('');
+
+            document.getElementById('rankingArticulos').innerHTML = rankingHTML || '<p style="color: var(--text-muted);">No hay datos aún. ¡Sé el primero en dar "me gusta"!</p>';
+        });
+    </script>
+</body>
+</html>
